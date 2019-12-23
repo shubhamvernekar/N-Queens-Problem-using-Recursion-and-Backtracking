@@ -1,5 +1,9 @@
 # N-Queens-Problem-using-Recursion-and-Backtracking
 
+The N Queen is the problem of placing N chess queens on an N×N chessboard so that no two queens attack each other. For example, following is a solution for 4 Queen problem.
+
+![chess image](https://media.geeksforgeeks.org/wp-content/uploads/ratinmaze_filled11-1-e1518086835222.png)
+
 Given a chess board having NxN cells, you need to place N queens on the board in such a way that no queen attacks any other queen.
 
 Input:
