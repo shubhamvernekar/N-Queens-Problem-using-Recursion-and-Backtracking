@@ -40,17 +40,20 @@ class TestClass {
         }
         return false;
     }
+    
+    //This function will call itself re
     public boolean findQueens(int N,int row){
         if(N==0){
             return true;
         }
         for(int j=0;j<n;j++){
             if(!isAtacked(row,j)){
-                board[row][j] = 1;
-                if(findQueens(N-1,row+1)){
-                    return true;
+                board[row][j] = 1;          //Place current queen at cell (row,j)
+                if(findQueens(N-1,row+1)){   // Solve subproblem
+                    return true;            // if solution is found return true
                 }else{
-                    board[row][j] = 0;
+                    board[row][j] = 0;      /* if solution is not found undo whatever changes 
+                                       were made i.e., remove  current queen from (row,j)*/
                 }
                 
             }
@@ -66,6 +69,7 @@ class TestClass {
     
         //Scanner
         Scanner s = new Scanner(System.in);
+        System.out.println("Please Enter the size of board (eg:for 4x4 enter 4)");
         int N = s.nextInt();
         TestClass obj = new TestClass(N);
         if(obj.findQueens(N,0)){
